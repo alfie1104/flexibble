@@ -22,7 +22,11 @@ const Modal = ({ children }: { children: ReactNode }) => {
   );
 
   return (
-    <div ref={overlay} className="modal" onClick={handleClick}>
+    <div
+      ref={overlay}
+      className="fixed z-10 left-0 right-0 top-0 bottom-0 mx-auto bg-black/80"
+      onClick={handleClick}
+    >
       <button
         type="button"
         onClick={onDismiss}
@@ -30,7 +34,10 @@ const Modal = ({ children }: { children: ReactNode }) => {
       >
         <Image src="/close.svg" width={17} height={17} alt="close" />
       </button>
-      <div ref={wrapper} className="modal_wrapper">
+      <div
+        ref={wrapper}
+        className="flex justify-start items-center flex-col absolute h-[95%] w-full bottom-0 bg-white rounded-t-3xl lg:px-40 px-8 pt-14 pb-72 overflow-auto"
+      >
         {children}
       </div>
     </div>
