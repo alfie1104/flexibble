@@ -30,7 +30,10 @@ const Navbar = async () => {
             <Link href="/create-project">Share Work</Link>
           </>
         ) : (
-          <AuthProviders />
+          <>
+            <AuthProviders />
+            <Link href="/create-project">Share Work</Link>
+          </>
         )}
       </div>
     </nav>

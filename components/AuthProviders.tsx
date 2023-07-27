@@ -23,6 +23,7 @@ const AuthProviders = () => {
 
       console.log(res);
 
+      //@ts-ignore
       setProviders(res);
     };
 
