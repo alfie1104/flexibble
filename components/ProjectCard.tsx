@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -35,7 +37,7 @@ const ProjectCard = ({ id, image, title, name, avatarUrl, userId }: Props) => {
           className="w-full h-full object-cover rounded-2xl"
           alt="Project Image"
         />
-        <div className="hidden grouo-hover:flex profile_card-title">
+        <div className="hidden group-hover:flex profile_card-title">
           <p className="w-full">{title}</p>
         </div>
       </Link>

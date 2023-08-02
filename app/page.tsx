@@ -15,7 +15,7 @@ type ProjectSearch = {
 };
 
 const Home = async () => {
-  const data = (await fetchAllProjects()) as ProjectSearch;
+  const data = (await fetchAllProjects("Frontend")) as ProjectSearch;
 
   const projectsToDisplay = data?.projectSearch.edges || [];
 
